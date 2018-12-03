@@ -1,4 +1,3 @@
-from enum import Enum
 from pathlib import Path
 from typing import List, Union
 
@@ -37,7 +36,7 @@ class ModelTrainer:
         self.loss: float = loss
         self.scheduler_state: dict = scheduler_state
         self.optimizer_state: dict = optimizer_state
-         
+
     def train(self,
               base_path: Union[Path, str],
               evaluation_metric: EvaluationMetric = EvaluationMetric.MICRO_F1_SCORE,
